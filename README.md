@@ -1,5 +1,10 @@
 # n-deep-trim
 
+[![NPM version][npm-image]][npm-url]
+
+[npm-url]: https://www.npmjs.com/package/n-deep-trim
+[npm-image]: https://img.shields.io/npm/v/n-deep-trim.svg
+
 > deep trim
 
 ## Usage
