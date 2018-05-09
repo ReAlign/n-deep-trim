@@ -13,6 +13,7 @@
 
 ```javascript
 import deepTrim from 'n-deep-trim';
+deepTrim(obj);
 ```
 
 ### UMD
@@ -20,6 +21,7 @@ import deepTrim from 'n-deep-trim';
 ```javascript
 // download files
 use n-deep-trim/dist/n-deep-trim.js
+DeepTrim.default(obj)
 ```
 
 ```javascript

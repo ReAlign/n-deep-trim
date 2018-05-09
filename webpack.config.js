@@ -6,7 +6,7 @@ let defaultConfig = {
   },
   output: {
     filename: './dist/n-deep-trim.js',
-    library: 'nDeepTrim',
+    library: 'DeepTrim',
     libraryTarget: 'umd',
   },
   module: {
