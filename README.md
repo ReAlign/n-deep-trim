@@ -21,7 +21,7 @@ deepTrim(obj);
 ```javascript
 // download files
 use n-deep-trim/dist/n-deep-trim.js
-DeepTrim.default(obj)
+DeepTrim(obj)
 ```
 
 ```javascript

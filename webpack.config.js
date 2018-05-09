@@ -10,9 +10,15 @@ let defaultConfig = {
     libraryTarget: 'umd',
   },
   module: {
-  },
-  plugins: [
-  ]
+    loaders: [
+      {
+        test: /\.js$/,
+        loader: [
+          'babel-loader',
+        ],
+      },
+    ]
+  }
 };
 
 module.exports = defaultConfig;

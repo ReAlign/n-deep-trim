@@ -78,38 +78,44 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
-const _ = {
-    typeOf(o) {
-        return o == null
-                ? String(o)
-                : ({}).toString.call(o).slice(8, -1).toLowerCase();
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var _ = {
+    typeOf: function typeOf(o) {
+        return o == null ? String(o) : {}.toString.call(o).slice(8, -1).toLowerCase();
     },
-    perform2ObjectOrArray(obj = {}) {
-        Object.keys(obj).forEach((k) => {
-            const type = _.typeOf(obj[k]);
+    perform2ObjectOrArray: function perform2ObjectOrArray() {
+        var obj = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
-            if(type === 'object' || type === 'array') {
+        Object.keys(obj).forEach(function (k) {
+            var type = _.typeOf(obj[k]);
+
+            if (type === 'object' || type === 'array') {
                 _.deepTrim(obj[k]);
-            } else if(type === 'string') {
+            } else if (type === 'string') {
                 obj[k] = _.perform2String(obj[k]);
             }
         });
     },
-    perform2String(str = '') {
+    perform2String: function perform2String() {
+        var str = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+
         return str.trim();
     },
-    deepTrim(obj = '') {
-        const type = _.typeOf(obj);
+    deepTrim: function deepTrim() {
+        var obj = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
 
-        if(type === 'object' || type === 'array') {
+        var type = _.typeOf(obj);
+
+        if (type === 'object' || type === 'array') {
             _.perform2ObjectOrArray(obj);
-        } else if(type === 'string') {
+        } else if (type === 'string') {
             obj = _.perform2String(obj);
         }
 
@@ -117,7 +123,8 @@ const _ = {
     }
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (_.deepTrim);
+exports.default = _.deepTrim;
+module.exports = exports['default'];
 
 /***/ })
 /******/ ]);
